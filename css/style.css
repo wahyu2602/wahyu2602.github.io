@@ -1,6 +1,7 @@
 body {
   position: relative;
 }
+
 .container-custom {
   overflow: hidden;
 }
@@ -12,7 +13,7 @@ body {
 }
 
 .bg-img-full {
-  background: url("/img/bg-home.jpg");
+  background: url(../img/bg-home.jpg);
   position: relative;
   background-size: cover;
   background-position: left;
@@ -151,7 +152,7 @@ body {
 ---------------------------------------------------------------------------------------------------------
 */
 .bg-two {
-  background-image: url(/img/bg-two.jpg);
+  background-image: url(../img/bg-two.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -187,7 +188,7 @@ body {
 --------------------------------------------------------------------------------
 */
 .bg-three {
-  background-image: url(/img/bg-three.jpg);
+  background-image: url(../img/bg-three.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -222,7 +223,7 @@ body {
 ---------------------------------------------------------------------------------
 */
 .bg-four {
-  background-image: url(/img/bg-four.jpg);
+  background-image: url(../img/bg-four.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
