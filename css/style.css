@@ -1,0 +1,304 @@
+body {
+  position: relative;
+}
+.container-custom {
+  overflow: hidden;
+}
+
+.row-custom {
+  position: relative;
+  color: white;
+  z-index: 2;
+}
+
+.bg-img-full {
+  background: url("/img/bg-home.jpg");
+  position: relative;
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.bg-img-full::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+}
+
+.title {
+  position: relative;
+  font-size: 3rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.text-title {
+  position: relative;
+  animation: animtitle 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  left: 300px;
+  opacity: 0;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: white;
+  z-index: -1;
+  animation: animbox 2s forwards;
+  animation-delay: 1.5s;
+}
+
+.sub-title {
+  font-size: 1rem;
+  color: #b53471;
+  position: relative;
+  z-index: 1;
+}
+
+.sub-title::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: white;
+  left: 0;
+  z-index: -1;
+  animation: animbox 2s forwards;
+}
+
+/* Navbar
+------------------------------------------------------------------------------------------------------
+*/
+.nav-custom {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.nav-custom > .container {
+  display: flex;
+  justify-content: end;
+}
+
+.navbar-nav-custom {
+  margin-right: 100px;
+  margin-top: 20px;
+}
+
+.nav-link-custom {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  background: #b53471;
+  width: 100%;
+  height: 0px;
+  top: 20px;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.nav-link-custom:hover {
+  color: #b53471;
+}
+
+.nav-link-custom:hover::after {
+  height: 5px;
+}
+
+.active-custom {
+  color: #b53471;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.active-custom::after {
+  content: "";
+  position: absolute;
+  background: #b53471;
+  width: 100%;
+  height: 5px;
+  top: 20px;
+  left: 0;
+  z-index: -1;
+}
+
+.nav-mobile-phone {
+  display: none;
+}
+
+/* CSS Page Two 
+---------------------------------------------------------------------------------------------------------
+*/
+.bg-two {
+  background-image: url(/img/bg-two.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+.bg-two::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.text-custom {
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.title-about::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #b53471;
+}
+
+/* Page Three 
+--------------------------------------------------------------------------------
+*/
+.bg-three {
+  background-image: url(/img/bg-three.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+.bg-three::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.card {
+  position: relative;
+  z-index: 2;
+}
+
+.page-scroll {
+  height: 350px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+/* Page Four 
+---------------------------------------------------------------------------------
+*/
+.bg-four {
+  background-image: url(/img/bg-four.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+.bg-four::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.icon-size {
+  font-size: 4rem;
+}
+
+/* animation 
+--------------------------------------------------------------------------------
+*/
+@keyframes animtitle {
+  0% {
+    left: 300px;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animbox {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Screen Mode
+------------------------------------------------------------------------------------
+*/
+
+/* Phone */
+@media (max-width: 575.98px) {
+  .nav-dekstop {
+    display: none;
+  }
+
+  .nav-mobile-phone {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: #b53471;
+    z-index: 5;
+  }
+
+  .nav-link-custom-mobile {
+    position: relative;
+    margin: 0 5px;
+    font-size: 2rem;
+    color: white;
+    z-index: 5;
+    padding: 0 10px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+}
