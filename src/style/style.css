@@ -13,8 +13,8 @@
 
 body {
   position: relative;
-  font-family: gemunu;
-  background: #f7f1e3;
+  font-family: gemunu !important;
+  background: #f7f1e3 !important;
 }
 
 .navbar-custom {
