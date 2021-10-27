@@ -9,11 +9,11 @@
 
 * {
   box-sizing: border-box;
+  font-family: gemunu !important;
 }
 
 body {
   position: relative;
-  font-family: gemunu !important;
   background: #f7f1e3 !important;
 }
 
